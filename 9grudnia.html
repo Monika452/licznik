@@ -1,31 +1,29 @@
 <html>
 <head>
 <style>
-
-body {background-color:black;}
-
+div {color:white;}
 </style>
 </head>
 <body>
 <div id="pasek">
-ggghijkl  Hejo tu Edyta
+</div>
+</body>
 <script>
   setInterval(
 function(){
-      document.body.innerText=
+      document.getElementById("pasek").innerText=
         Math.floor(Date.now() / 1000)-1575904740;
-    }, 1000
+    },
 );
 
-  setInterval(
+setInterval(
 function(){
-	
-	document.body.style.backgroundColor = "white";
+	var d = new Date();
+	var n = d.getSeconds();
+	var x = n*10000 + n*1000 + n;
+	document.body.style.backgroundColor = x;
 	}	
-
 );
-</script>
-</div>
 
-</body>
+</script>
 </html>
